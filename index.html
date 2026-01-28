@@ -1,36 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Title</title>
 
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" type ="text/css" href="./styles/style.css">
-</head>
-<body>
-    <div class="main-container">
-        <div class="panel left">
-            <div class="top sub-container">
-                <div class="title">This is for</div>
-                <div data-result class="result">The result is</div>
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="panel">
+                <button class="mission">Mission</button>
             </div>
-            <div class="bottom sub-container">
-                <div class="title">This is for</div>
-                <div data-result class="result">The result is</div>
+            <div class="panel-container">
+                <div class="options-container">
+                    <div class="feeling-option option" data-value="lonely">
+                        lonely
+                    </div>
+                    <div
+                        class="feeling-option option active"
+                        data-value="overwhelmed"
+                    >
+                        overwhelmed
+                    </div>
+                    <div class="feeling-option option" data-value="curious">
+                        curious
+                    </div>
+                    <div class="feeling-option option" data-value="unmotivated">
+                        unmotivated
+                    </div>
+                    <div class="feeling-option option" data-value="upset">
+                        upset
+                    </div>
+                    <div class="feeling-option option" data-value="thoughtful">
+                        thoughtful
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="activity-option option" data-value="learn">
+                        learn
+                    </div>
+                    <div class="activity-option option" data-value="connect">
+                        connect
+                    </div>
+                    <div class="activity-option option" data-value="calm">
+                        calm
+                    </div>
+                    <div
+                        class="activity-option option active"
+                        data-value="reflect"
+                    >
+                        reflect
+                    </div>
+                    <div class="activity-option option" data-value="inspire">
+                        inspire
+                    </div>
+                </div>
+            </div>
+            <div class="suggest-btn" onclick="getSelectedOption()">
+                Suggest Resource
             </div>
         </div>
-        <div class="panel right">
-            <div class="top sub-container">
-                <div class="title">This is for</div>
-                <div data-result class="result">The result is</div>
+
+        <div class="pop-up">
+            <h2>Misson</h2>
+            <p class="mission-description"></p>
+        </div>
+
+        <div class="pop-up">
+            <div class="thumbnail-container">
+                <picture src="" class="thumbnail"></picture>
+            </div>
+            <div class="info">
+                <div class="title">Title</div>
+                <div class="description">Description</div>
+                <a class="link" href="" target="_blank">Go to Resource</a>
             </div>
         </div>
-    </div>
-
-
-    <!-- JS Script(s) -->
-    <script src="./scripts/script.js"></script>
-</body>
+        <!-- JS Script(s) -->
+        <script src="./scripts/script.js"></script>
+    </body>
 </html>
