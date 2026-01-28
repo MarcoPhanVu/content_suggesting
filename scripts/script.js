@@ -1,10 +1,37 @@
-const allSmallContainer = document.querySelectorAll(".sub-container");
-const allDataResult = document.querySelectorAll(".result");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close-btn");
+
+var missionDesc =
+    "In a world where an excessive amount of information that are easy to access keeps increasing, learning something isn't hard, the hard part is to know where to start. As someone who often need gentle guidance rather than endless searching, I want to create a website that allows the user to select how are they feeling today, and what do they want to do today, then based on their selection, the website will suggest a resource that fits their current state the best. The resources are carefully curated to ensure quality over quantity, and the suggestion algorithm is designed to prioritize relevance and personalization.";
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    document.querySelector(".thumbnail-container").style.display = "block";
+    document.querySelector(".link").style.display = "inline-block";
+});
+
+modal.addEventListener("click", (e) => {
+    // Click outside to close
+    if (e.target === modal) {
+        modal.classList.add("hidden");
+    }
+
+    document.querySelector(".thumbnail-container").style.display = "block";
+    document.querySelector(".link").style.display = "inline-block";
+});
+
+function toggleMission() {
+    console.log("Mission button clicked");
+    document.querySelector(".title").textContent = "Mission";
+    document.querySelector(".modal-content").innerText = missionDesc;
+    modal.classList.remove("hidden");
+    // document.querySelector(".thumbnail-container").style.backgroundColor ="#eca513";
+    // document.querySelector(".link").style.display = "none";
+}
 
 // Sources:
-
 const feelingOptions = document.querySelectorAll(".feeling-option");
-const activityOptions = document.querySelectorAll(".activity-option");
+const intentionOptions = document.querySelectorAll(".intention-option");
 
 const resources = [
     {
@@ -156,15 +183,60 @@ function singleSelect(options) {
         option.addEventListener("click", () => {
             options.forEach((opt) => opt.classList.remove("active"));
             option.classList.add("active"); // should not use toggle to prevent deselect
-
+            console.log("Option selected:", option.dataset.value);
             // updateSelection();
         });
     });
 }
 
-function updateSelection() {
+function buildWeightedPool(feeling, intention) {
+    const pool = [];
+
+    for (let i = 0; i < resources.length; i++) {
+        const resource = resources[i];
+        const score = scoreResource(resource, feeling, intention);
+        if (score > 0) {
+            for (let j = 0; j < score; j++) {
+                pool.push(resource);
+            }
+        }
+    }
+
+    return pool;
 }
 
-function getSelectedOption() {
-    
+function pickRandomResource(pool) {
+    if (pool.length === 0) return null;
+
+    const index = Math.floor(Math.random() * pool.length);
+    return pool[index];
+}
+
+function updateRecommendation() {
+    const feeling = getSelectedFeeling();
+    const intention = getSelectedIntention();
+
+    console.log("Selected Feeling:", feeling);
+    console.log("Selected Ieeling:", intention);
+    if (!feeling || !intention) return;
+
+    const pool = buildWeightedPool(feeling, intention);
+    const resource = pickRandomResource(pool);
+
+    if (!resource) return;
+    document.querySelector(".title").textContent = resource.title;
+    document.querySelector(".description").textContent =
+        `Format: ${resource.format} | Tone: ${resource.emotions.join(", ")}`;
+
+    modal.classList.remove("hidden");
+}
+
+function getSelectedFeeling() {
+    const activeFeeling = document.querySelector(".feeling-option.active");
+    return activeFeeling ? activeFeeling.dataset.value : null;
+}
+
+function getSelectedIntention() {
+    const activeIntention = document.querySelector(".intention-option.active");
+    return activeIntention ? activeIntention.dataset.value : null;
 }

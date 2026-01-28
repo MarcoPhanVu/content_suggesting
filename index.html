@@ -11,9 +11,7 @@
     </head>
     <body>
         <div class="main-container">
-            <div class="panel">
-                <button class="mission">Mission</button>
-            </div>
+            <button class="mission" onclick="toggleMission()">Mission</button>
             <div class="panel-container">
                 <div class="options-container">
                     <div class="feeling-option option" data-value="lonely">
@@ -39,44 +37,45 @@
                     </div>
                 </div>
                 <div class="options-container">
-                    <div class="activity-option option" data-value="learn">
+                    <div class="intention-option option" data-value="learn">
                         learn
                     </div>
-                    <div class="activity-option option" data-value="connect">
+                    <div class="intention-option option" data-value="connect">
                         connect
                     </div>
-                    <div class="activity-option option" data-value="calm">
+                    <div class="intention-option option" data-value="calm">
                         calm
                     </div>
                     <div
-                        class="activity-option option active"
+                        class="intention-option option active"
                         data-value="reflect"
                     >
                         reflect
                     </div>
-                    <div class="activity-option option" data-value="inspire">
+                    <div class="intention-option option" data-value="inspire">
                         inspire
                     </div>
                 </div>
             </div>
-            <div class="suggest-btn" onclick="getSelectedOption()">
+            <button class="suggest-btn" onclick="updateRecommendation()">
                 Suggest Resource
-            </div>
+            </button>
         </div>
 
-        <div class="pop-up">
-            <h2>Misson</h2>
-            <p class="mission-description"></p>
-        </div>
-
-        <div class="pop-up">
-            <div class="thumbnail-container">
-                <picture src="" class="thumbnail"></picture>
-            </div>
-            <div class="info">
-                <div class="title">Title</div>
-                <div class="description">Description</div>
-                <a class="link" href="" target="_blank">Go to Resource</a>
+        <div class="modal hidden">
+            <div class="modal-content">
+                <button class="close-btn">X</button>
+                <div class="thumbnail-container">
+                    <img src="" class="thumbnail" alt="Thumbnail" />
+                </div>
+                <div class="info">
+                    <div class="title">Title</div>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias illo beatae ad ipsa ipsum!.
+                    </div>
+                    <a href="" target="_blank" class="link">Go to Resource</a>
+                </div>
             </div>
         </div>
         <!-- JS Script(s) -->
