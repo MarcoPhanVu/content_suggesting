@@ -182,12 +182,16 @@ function singleSelect(options) {
     options.forEach((option) => {
         option.addEventListener("click", () => {
             options.forEach((opt) => opt.classList.remove("active"));
+            console.log("Option clicked:", option.dataset.value);
             option.classList.add("active"); // should not use toggle to prevent deselect
             console.log("Option selected:", option.dataset.value);
             // updateSelection();
         });
     });
 }
+
+singleSelect(feelingOptions);
+singleSelect(intentionOptions);
 
 function buildWeightedPool(feeling, intention) {
     const pool = [];
@@ -210,6 +214,11 @@ function pickRandomResource(pool) {
 
     const index = Math.floor(Math.random() * pool.length);
     return pool[index];
+}
+
+function pickRandomResourceAll() {
+    const index = Math.floor(Math.random() * resources.length);
+    return resources[index];
 }
 
 function updateRecommendation() {

@@ -50,12 +50,22 @@ body {
 }
 
 .panel {
-    /* background-color: rgb(37, 68, 37); */
+    /* background-color: rgb(94, 190, 94); */
     padding: 24px;
     width: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.panel-container {
+    background-color: #57a87f;
+}
+
+.options-container {
+    background-color: #a76571;
+    height: 100%;
+    margin: 0px 36px;
 }
 
 .options-container .option {
@@ -101,11 +111,11 @@ body {
     color: #1e9109;
 }
 
-.suggest-btn {
+.suggest-btn,
+.suprise-btn {
     cursor: pointer;
     border-radius: 8px;
     background-color: var(--support-color);
-    /* border: solid var(--support-color) 2px; */
     color: white;
     font-size: 20px;
     justify-content: center;
@@ -116,7 +126,15 @@ body {
     transition: 150ms ease-in-out;
 }
 
+.suprise-btn {
+    background-color: var(--secondary-color);
+}
+
 .suggest-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.suprise-btn:hover {
     background-color: var(--support-color);
 }
 
@@ -167,4 +185,11 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.options-desc {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: white;
 }
