@@ -16,7 +16,7 @@ html {
     --main-color: #565676;
     --secondary-color: #aeadf0;
     --support-color1: #a76571;
-    --support-color2: #7fbeab;
+    --support-color2: #ff9068;
     --white-color: #ffffff;
     --blacc-color: #000000;
 }
@@ -166,6 +166,10 @@ body {
     text-align: center;
     position: relative;
     animation: fadeIn 200ms ease-in-out;
+}
+
+.modal-text-only {
+    text-align: justify;
 }
 
 .close-btn {
