@@ -91,7 +91,7 @@ const resources = [
         id: "kinglove",
         title: "King’s Message of Love",
         emotions: ["uplifting", "empathetic"],
-        format: "talk",
+        format: "ariticle",
         thumbnail_url: "./thumbnails/kinglove.png",
         href_url:
             "https://theconversation.com/why-a-fractured-nation-needs-to-remember-kings-message-of-love-68643",
@@ -327,11 +327,13 @@ function updateRecommendation() {
 
 function getSelectedFeeling() {
     const activeFeeling = document.querySelector(".feeling-option.active");
+    activeFeeling.classList.remove("active");
     return activeFeeling ? activeFeeling.dataset.value : null;
 }
 
 function getSelectedIntention() {
     const activeIntention = document.querySelector(".intention-option.active");
+    activeIntention.classList.remove("active");
     return activeIntention ? activeIntention.dataset.value : null;
 }
 
