@@ -2,7 +2,7 @@ const modal = document.querySelector(".modal");
 const closeBtn = document.querySelector(".close-btn");
 
 var missionDesc =
-    "In a world where an excessive amount of information that are easy to access keeps increasing, learning something isn't hard, the hard part is to know where to start. As someone who often need gentle guidance rather than endless searching, I want to create a website that allows the user to select how are they feeling today, and what do they want to do today, then based on their selection, the website will suggest a resource that fits their current state the best. The resources are pulled from Professor Sim Barhoyr's ENGL C1001 Spring 2026 course to ensure quality over quantity, and the suggestion algorithm(although quite simple for now) is designed to prioritize relevance and personalization.";
+    "In a world where an excessive amount of information that are easy to access keeps increasing, learning something isn't hard, the hard part is to know where to start. As someone who often need gentle guidance rather than endless searching, I want to create a website that allows the user to select how are they feeling today, and what do they want to do today, then based on their selection, the website will suggest a resource that fits their current state the best. The resources are pulled from Professor Sim Barhoum's ENGL C1001 Spring 2026 course to ensure quality over quantity, and the suggestion algorithm(although quite simple for now) is designed to prioritize relevance and personalization.";
 
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
