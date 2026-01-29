@@ -6,8 +6,8 @@ var missionDesc =
 
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
-    document.querySelector(".thumbnail-container").style.display = "block";
-    document.querySelector(".link").style.display = "inline-block";
+    // document.querySelector(".thumbnail-container").style.display = "block";
+    // document.querySelector(".link").style.display = "inline-block";
 });
 
 modal.addEventListener("click", (e) => {
@@ -22,11 +22,11 @@ modal.addEventListener("click", (e) => {
 
 function toggleMission() {
     console.log("Mission button clicked");
-    document.querySelector(".title").textContent = "Mission";
-    document.querySelector(".modal-content").innerText = missionDesc;
+    document.querySelector(".modal-text-only").innerHTML = missionDesc;
+
+    document.querySelector(".modal-text-only").style.display = "block";
+    document.querySelector(".modal-content").style.display = "none";
     modal.classList.remove("hidden");
-    // document.querySelector(".thumbnail-container").style.backgroundColor ="#eca513";
-    // document.querySelector(".link").style.display = "none";
 }
 
 // Sources:
@@ -182,9 +182,8 @@ function singleSelect(options) {
     options.forEach((option) => {
         option.addEventListener("click", () => {
             options.forEach((opt) => opt.classList.remove("active"));
-            console.log("Option clicked:", option.dataset.value);
+            // console.log("Option clicked:", option.dataset.value);
             option.classList.add("active"); // should not use toggle to prevent deselect
-            console.log("Option selected:", option.dataset.value);
             // updateSelection();
         });
     });
@@ -217,22 +216,40 @@ function pickRandomResource(pool) {
 }
 
 function pickRandomResourceAll() {
+    console.log("Surprise Me button clicked");
     const index = Math.floor(Math.random() * resources.length);
-    return resources[index];
+    const resource = resources[index];
+
+    document.querySelector(".modal-content").style.display = "block";
+    document.querySelector(".modal-text-only").style.display = "none";
+    document.querySelector(".title").textContent = resource.title;
+    document.querySelector(".description").textContent =
+        `Format: ${resource.format} | Tone: ${resource.emotions.join(", ")}`;
+
+    modal.classList.remove("hidden");
 }
 
 function updateRecommendation() {
     const feeling = getSelectedFeeling();
     const intention = getSelectedIntention();
 
-    console.log("Selected Feeling:", feeling);
-    console.log("Selected Ieeling:", intention);
-    if (!feeling || !intention) return;
+    // console.log("Selected Feeling:", feeling);
+    // console.log("Selected Ieeling:", intention);
+    if (!feeling || !intention) {
+        toggleMission();
+        document.querySelector(".modal-text-only").innerHTML =
+            "Please select how you are feeling and your intention for today.";
+
+        modal.classList.remove("hidden");
+    }
 
     const pool = buildWeightedPool(feeling, intention);
     const resource = pickRandomResource(pool);
 
     if (!resource) return;
+
+    document.querySelector(".modal-content").style.display = "block";
+    document.querySelector(".modal-text-only").style.display = "none";
     document.querySelector(".title").textContent = resource.title;
     document.querySelector(".description").textContent =
         `Format: ${resource.format} | Tone: ${resource.emotions.join(", ")}`;
