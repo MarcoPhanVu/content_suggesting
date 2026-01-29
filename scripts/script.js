@@ -42,7 +42,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/1s2yPnYgQOM?si=rSmC9tujtXAi7Hgd",
         embeddable: true,
-        embedded_iframe:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/1s2yPnYgQOM?si=TIaFl1O5lp0X_r6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -53,7 +53,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/krfcq5pF8u8?si=qj_Z8njS8-SxUEKD",
         embeddable: true,
-        embedded_iframe:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/krfcq5pF8u8?si=yj8ouV9a89PxIE1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -72,8 +72,8 @@ const resources = [
         format: "interview",
         thumbnail_url: "",
         href_url: "https://youtu.be/uqK2_w4k5hA?si=-9ipDDUb2X2D_Zun",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/uqK2_w4k5hA?si=-TdDqwkeQb5krhN-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -83,8 +83,8 @@ const resources = [
         format: "video",
         thumbnail_url: "",
         href_url: "https://youtu.be/GTvU7uUgjUI?si=zpzVctz-hwNs08mq",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/GTvU7uUgjUI?si=zpzVctz-hwNs08mq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -95,8 +95,8 @@ const resources = [
         thumbnail_url: "./thumbnails/kinglove.png",
         href_url:
             "https://theconversation.com/why-a-fractured-nation-needs-to-remember-kings-message-of-love-68643",
-        embbedable: false,
-        embbeded_iframe: "",
+        embeddable: false,
+        embededHtml: "",
     },
     {
         id: "sm",
@@ -105,8 +105,8 @@ const resources = [
         format: "article",
         thumbnail_url: "./thumbnails/sm.png",
         href_url: "https://www.socialmindfulness.nl/",
-        embbedable: false,
-        embbeded_iframe: "",
+        embeddable: false,
+        embededHtml: "",
     },
     {
         id: "med",
@@ -115,8 +115,8 @@ const resources = [
         format: "exercise",
         thumbnail_url: "./thumbnails/headspace.png",
         href_url: "https://www.headspace.com/",
-        embbedable: false,
-        embbeded_iframe: "",
+        embeddable: false,
+        embededHtml: "",
     },
     {
         id: "conv",
@@ -125,8 +125,8 @@ const resources = [
         format: "talk",
         thumbnail_url: "",
         href_url: "https://youtu.be/R1vskiVDwl4?si=J1hz7AxA70QG4d6M",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/R1vskiVDwl4?si=Zq1QXaFbcalp31PT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -136,8 +136,8 @@ const resources = [
         format: "talk",
         thumbnail_url: "",
         href_url: "https://youtu.be/q7a5TIzOmeQ?si=B5B1GnpGxd-lbzY0",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/q7a5TIzOmeQ?si=-EkenCdDXKSjaSs_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -147,8 +147,8 @@ const resources = [
         format: "talk",
         thumbnail_url: "",
         href_url: "https://youtu.be/kVScc1CRxgs?si=ISmhyFXsvYuKQAFv",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/kVScc1CRxgs?si=UyvfIJjYyYHzTCT_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -159,8 +159,8 @@ const resources = [
         thumbnail_url: "./thumbnails/rbk.png",
         href_url:
             "https://www.npr.org/sections/ed/2018/07/23/627265706/raising-brilliant-kids-with-research-to-back-you-up?utm_medium=RSS&utm_campaign=npred",
-        embbedable: false,
-        embbeded_iframe: "",
+        embeddable: false,
+        embededHtml: "",
     },
     {
         id: "goodlife",
@@ -169,8 +169,8 @@ const resources = [
         format: "talk",
         thumbnail_url: "",
         href_url: "https://youtu.be/8KkKuTCFvzI?si=VkCISpjZRM3XeL5L",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/8KkKuTCFvzI?si=VkCISpjZRM3XeL5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -181,8 +181,8 @@ const resources = [
         thumbnail_url: "./thumbnails/kingagape.png",
         href_url:
             "https://www.themarginalian.org/2015/07/01/martin-luther-king-jr-an-experiment-in-love/",
-        embbedable: false,
-        embbeded_iframe: "",
+        embeddable: false,
+        embededHtml: "",
     },
     {
         id: "brain",
@@ -191,8 +191,8 @@ const resources = [
         format: "talk",
         thumbnail_url: "",
         href_url: "https://youtu.be/hQaN5w3YwtM?si=Ry00W7nhuAgen3PH",
-        embbedable: true,
-        embbeded_iframe:
+        embeddable: true,
+        embededHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/hQaN5w3YwtM?si=Ry00W7nhuAgen3PH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
 ];
@@ -282,7 +282,12 @@ function pickRandomResourceAll() {
     document.querySelector(".description").textContent =
         `Format: ${resource.format} | Tone: ${resource.emotions.join(", ")}`;
 
+    renderMedia(resource);
     modal.classList.remove("hidden");
+
+    const link = document.querySelector(".link");
+    link.href = resource.href_url;
+    link.style.display = resource.href_url ? "inline-block" : "none"; // if exist -> show, else hide
 }
 
 function updateRecommendation() {
@@ -306,11 +311,18 @@ function updateRecommendation() {
 
     document.querySelector(".modal-content").style.display = "block";
     document.querySelector(".modal-text-only").style.display = "none";
+
     document.querySelector(".title").textContent = resource.title;
     document.querySelector(".description").textContent =
         `Format: ${resource.format} | Tone: ${resource.emotions.join(", ")}`;
 
+    renderMedia(resource);
+
     modal.classList.remove("hidden");
+
+    const link = document.querySelector(".link");
+    link.href = resource.href_url;
+    link.style.display = resource.href_url ? "inline-block" : "none"; // if exist -> show, else hide
 }
 
 function getSelectedFeeling() {
@@ -321,4 +333,19 @@ function getSelectedFeeling() {
 function getSelectedIntention() {
     const activeIntention = document.querySelector(".intention-option.active");
     return activeIntention ? activeIntention.dataset.value : null;
+}
+
+function renderMedia(resource) {
+    const container = document.querySelector(".thumbnail-container");
+    container.innerHTML = "";
+
+    if (resource.embeddable && resource.embeddedHtml) {
+        container.innerHTML = resource.embeddedHtml;
+    } else if (resource.thumbnail_url) {
+        const img = document.createElement("img");
+        img.src = resource.thumbnail_url;
+        img.alt = "Thumbnail for " + resource.title;
+        img.className = "thumbnail";
+        container.appendChild(img);
+    }
 }
