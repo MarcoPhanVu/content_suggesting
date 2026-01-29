@@ -73,7 +73,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/uqK2_w4k5hA?si=-9ipDDUb2X2D_Zun",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/uqK2_w4k5hA?si=-TdDqwkeQb5krhN-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -84,7 +84,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/GTvU7uUgjUI?si=zpzVctz-hwNs08mq",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/GTvU7uUgjUI?si=zpzVctz-hwNs08mq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -96,7 +96,7 @@ const resources = [
         href_url:
             "https://theconversation.com/why-a-fractured-nation-needs-to-remember-kings-message-of-love-68643",
         embeddable: false,
-        embededHtml: "",
+        embeddedHtml: "",
     },
     {
         id: "sm",
@@ -106,7 +106,7 @@ const resources = [
         thumbnail_url: "./thumbnails/sm.png",
         href_url: "https://www.socialmindfulness.nl/",
         embeddable: false,
-        embededHtml: "",
+        embeddedHtml: "",
     },
     {
         id: "med",
@@ -116,7 +116,7 @@ const resources = [
         thumbnail_url: "./thumbnails/headspace.png",
         href_url: "https://www.headspace.com/",
         embeddable: false,
-        embededHtml: "",
+        embeddedHtml: "",
     },
     {
         id: "conv",
@@ -126,7 +126,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/R1vskiVDwl4?si=J1hz7AxA70QG4d6M",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/R1vskiVDwl4?si=Zq1QXaFbcalp31PT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -137,7 +137,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/q7a5TIzOmeQ?si=B5B1GnpGxd-lbzY0",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/q7a5TIzOmeQ?si=-EkenCdDXKSjaSs_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -148,7 +148,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/kVScc1CRxgs?si=ISmhyFXsvYuKQAFv",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/kVScc1CRxgs?si=UyvfIJjYyYHzTCT_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -160,7 +160,7 @@ const resources = [
         href_url:
             "https://www.npr.org/sections/ed/2018/07/23/627265706/raising-brilliant-kids-with-research-to-back-you-up?utm_medium=RSS&utm_campaign=npred",
         embeddable: false,
-        embededHtml: "",
+        embeddedHtml: "",
     },
     {
         id: "goodlife",
@@ -170,7 +170,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/8KkKuTCFvzI?si=VkCISpjZRM3XeL5L",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/8KkKuTCFvzI?si=VkCISpjZRM3XeL5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
     {
@@ -182,7 +182,7 @@ const resources = [
         href_url:
             "https://www.themarginalian.org/2015/07/01/martin-luther-king-jr-an-experiment-in-love/",
         embeddable: false,
-        embededHtml: "",
+        embeddedHtml: "",
     },
     {
         id: "brain",
@@ -192,7 +192,7 @@ const resources = [
         thumbnail_url: "",
         href_url: "https://youtu.be/hQaN5w3YwtM?si=Ry00W7nhuAgen3PH",
         embeddable: true,
-        embededHtml:
+        embeddedHtml:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/hQaN5w3YwtM?si=Ry00W7nhuAgen3PH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     },
 ];

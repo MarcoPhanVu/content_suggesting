@@ -15,7 +15,8 @@ html {
 :root {
     --main-color: #565676;
     --secondary-color: #aeadf0;
-    --support-color: #a76571;
+    --support-color1: #a76571;
+    --support-color2: #7fbeab;
     --white-color: #ffffff;
     --blacc-color: #000000;
 }
@@ -115,7 +116,7 @@ body {
 .suprise-btn {
     cursor: pointer;
     border-radius: 8px;
-    background-color: var(--support-color);
+    background-color: var(--secondary-color);
     color: white;
     font-size: 20px;
     justify-content: center;
@@ -125,17 +126,17 @@ body {
     width: 240px;
     transition: 150ms ease-in-out;
 }
-
+/* 
 .suprise-btn {
-    background-color: var(--secondary-color);
-}
+    background-color: var(--support-color2);
+} */
 
 .suggest-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--support-color1);
 }
 
 .suprise-btn:hover {
-    background-color: var(--support-color);
+    background-color: var(--support-color2);
 }
 
 .modal {
